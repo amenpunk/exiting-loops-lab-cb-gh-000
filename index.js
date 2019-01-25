@@ -19,12 +19,14 @@ function keepGoing(array,changeValue,skipValue){
   return array;
 }
 
-function findBy(array, findFn){
-   for(let i=0; i<array.length;i++){
-    if(array[i] == findBy){
-    break
-    return null;
+function findBy(array, findFn) {
+
+   for (let i = 0;i < array.length; i++) {
+      if (findFn(array[i])) {
+        return array[i];
+      }
     }
-  }
-   return array
+
+    return null;
+
 }
